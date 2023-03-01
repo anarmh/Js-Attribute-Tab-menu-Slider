@@ -38,4 +38,19 @@
 
 // slider
 
+let prevLeft=document.querySelector(".left");
+let nxtRight=document.querySelector(".right");
+
+
+nxtRight.addEventListener("click",function(){
+   let activeImage=document.querySelector(".active")
+   activeImage.classList.remove("active")
+   if(activeImage.nextElementSibling.classList!=null){
+    activeImage.nextElementSibling.classList.add("active")
+   }
+   else{
+    activeImage.parentNode.firstChild.classList.add("active")
+   }
+})
+
 
